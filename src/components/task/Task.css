@@ -1,0 +1,78 @@
+.task{
+    border-radius: 3px;
+    background-color: #dfdfdf;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    margin-right: 20px;
+    overflow: auto;
+}
+.task_header{
+    display: flex;
+    justify-content: space-between;
+    color: #6d808c;
+}
+.task__captionTask{
+flex-grow: 0;
+font-weight: bold;
+padding: 10px;
+}
+.task__microtasks div:first-child{
+    margin-top: 0px;
+}
+.task__btnClose{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 10px;
+}
+
+.task__microtasks{
+    overflow: auto;
+    flex-grow: 1;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.task__createTask:hover{
+background-color: indianred;
+border-bottom-right-radius : 3px;
+border-bottom-left-radius : 3px;
+}
+.task__btn_add{
+    cursor: pointer;
+    background-color: #39c071;
+    padding: 9px 12px;
+    border-radius: 3px;
+    color: white;
+    font-weight: bold;
+}
+.task__createTask{
+    font-size: 14px;
+    color: #6d808c;
+    flex-grow: 0;
+    padding: 10px;
+    
+}
+.task__texttask{
+    outline: none;
+    border: none;
+    width: 100%;
+}
+.task__createTaskBtn{
+    padding: 10px;
+  
+}
+.task__btns_area{
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+}
+.task__btn_X{
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    color: #6d808c; 
+}

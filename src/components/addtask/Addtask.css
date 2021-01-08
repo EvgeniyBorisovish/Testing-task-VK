@@ -1,0 +1,48 @@
+.addtask{
+    border-radius: 3px;
+    background-color: #dfdfdf;
+}
+.addtaskFirstBtn{
+    cursor: pointer;
+    font-size: 14px;
+    color: #6d808c;
+    flex-grow: 0;
+    padding: 10px;
+    
+}
+.addtaskFirstBtn:hover{
+    background-color: indianred;
+    border-bottom-right-radius : 3px;
+    border-bottom-left-radius : 3px;
+    }
+
+.taskInput{
+    cursor: pointer;
+    padding: 10px;
+    
+}
+.taskInput__TextArea{
+    outline: none;
+    border: none;
+    width: 100%;
+    border-radius: 3px;
+}
+.task__btns_area{
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+}
+.task__btn_add{
+    cursor: pointer;
+    background-color: #39c071;
+    padding: 9px 12px;
+    border-radius: 3px;
+    color: white;
+    font-weight: bold;
+}
+
+.task__btn_X{
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}

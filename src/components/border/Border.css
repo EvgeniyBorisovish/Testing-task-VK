@@ -1,0 +1,23 @@
+.border{
+    overflow: auto;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+   justify-content: start;
+   align-items: stretch;
+    padding:5px;
+    background-size: cover;
+    background-position: 50%;
+    background-image: url(http://react-kanban-board.surge.sh/static/media/background.7bce26d5.jpg);
+}
+
+.task_conteiner{
+  flex-shrink: 0;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
