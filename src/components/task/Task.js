@@ -1,6 +1,8 @@
-import {ADD_MICRO_TASK,DELETE_TASK} from '../../constants/actions'
+
 import React from 'react'
 import {useSelector,useDispatch} from 'react-redux'
+import {ADD_MICRO_TASK,DELETE_TASK} from '../../constants/actions'
+import {nanoid} from 'nanoid'
 import Microtask from '../microtask'
 import  Addtask  from "../addtask";
 
@@ -12,7 +14,7 @@ const tasks_arr = useSelector((state)=>(Object.values(state.microtask.tasks_obj)
 const addMicroTaskHandler = (actionType,value)=>{
   value = value.trim()
   if (value==="" || actionType.trim()===""){return}
-  dispath({type:actionType,payload:{text:value,id:+new Date(),id_task:id_task}})
+  dispath({type:actionType,payload:{text:value,id:nanoid(),id_task:id_task}})
 }
 const handDelTask = ()=>{
   dispath({type:DELETE_TASK,payload:id_task})

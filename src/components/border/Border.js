@@ -1,7 +1,8 @@
 
 import React from "react";
-import {ADD_TASK} from '../../constants/actions'
 import { useSelector,useDispatch } from 'react-redux';
+import {nanoid} from 'nanoid'
+import {ADD_TASK} from '../../constants/actions'
 import  Addtask  from "../addtask";
 import Task from '../task'
 export const Border = ()=>{
@@ -13,7 +14,7 @@ export const Border = ()=>{
   const addTask = (actionType,value)=>{
    value = value.trim()
    if (value==="" || actionType.trim()===""){return}
-   dispath({type:actionType,payload:{caption:value,id:+new Date()}})
+   dispath({type:actionType,payload:{caption:value,id:nanoid()}})
   }
 
    return (
