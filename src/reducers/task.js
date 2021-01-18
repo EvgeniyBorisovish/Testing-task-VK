@@ -4,7 +4,7 @@ const first = nanoid()
 const second = nanoid()
 const initialState = {
     tasks_arr: [ first ,second],
-    tasks_obj: { [first]:{caption:"Первая задача"}, [second]:{caption:"Вторая задача"}},
+    tasks_obj: { [first]:{caption:"Херовая задача"}, [second]:{caption:"Вторая задача"}},
     proccesing:false
 }
 
