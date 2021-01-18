@@ -1,8 +1,10 @@
 import {ADD_TASK,DELETE_TASK} from '../constants/actions'
-
+import {nanoid} from 'nanoid'
+const first = nanoid()
+const second = nanoid()
 const initialState = {
-    tasks_arr: [1,2],
-    tasks_obj: {1:{caption:"Первая задача"},2:{caption:"Вторая задача"}},
+    tasks_arr: [ first ,second],
+    tasks_obj: { [first]:{caption:"Первая задача"}, [second]:{caption:"Вторая задача"}},
     proccesing:false
 }
 

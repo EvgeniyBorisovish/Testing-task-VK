@@ -139,7 +139,8 @@ export default class App extends Component {
         return (
             <DragDropContext onDragEnd={this.onDragEnd}>
                 <Droppable droppableId="droppable">
-                    {(provided, snapshot) => (
+                    {
+                    (provided, snapshot) => (
                         <div
                             ref={provided.innerRef}
                             style={getListStyle(snapshot.isDraggingOver)}>
@@ -164,7 +165,8 @@ export default class App extends Component {
                             ))}
                             {provided.placeholder}
                         </div>
-                    )}
+                    )
+                    }
                 </Droppable>
                 <Droppable droppableId="droppable2">
                     {(provided, snapshot) => (
