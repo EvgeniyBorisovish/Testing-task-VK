@@ -2,7 +2,7 @@
 
 Демо — https://testing-task-vk.vercel.app/
 
-![](https://image.prntscr.com/image/e4X4bld8SYCe8FD_ijBTqQ.png)
+![](https://drive.google.com/file/d/18eIDUVmcrTAseNGajH1gVt1wjSWFvrzK/view?usp=sharing)
 
 ## Используемые технологии
 
