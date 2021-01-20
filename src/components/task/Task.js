@@ -6,6 +6,8 @@ import {nanoid} from 'nanoid'
 import Microtask from '../microtask'
 import  Addtask  from "../addtask";
 
+import clearSvg from "../../images/clear.svg";
+
 export const Task = ({id_task,provided})=>{
 const dispath = useDispatch()
 const data_obj = useSelector((state)=>(state.task.tasks_obj[id_task]))
@@ -23,8 +25,8 @@ const handDelTask = ()=>{
 return (<div className="task">
         <div className="task_header">
           
-          <div className="task__captionTask">{data_obj.caption}</div>
-          <div className="task__btnClose" onClick={handDelTask} ><div>&#10006;</div></div>
+          <b className="task__captionTask">{data_obj.caption}</b>
+          <div className="task__btnClose" onClick={handDelTask} ><img src={clearSvg}></img></div>
         </div>
         <div className="task__microtasks">
               {tasks_arr.map(({id,text,id_task},index)=>{
@@ -48,7 +50,7 @@ return (<div className="task">
         {provided.placeholder}
         </div>
         
-        <Addtask getAction={addMicroTaskHandler.bind(null,ADD_MICRO_TASK)}/>
+        <Addtask getAction={addMicroTaskHandler.bind(null,ADD_MICRO_TASK)} textPlaceholder={"Введите текст  микрозадача"}/>
         </div>);
      
 }

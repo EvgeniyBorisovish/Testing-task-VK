@@ -1,6 +1,6 @@
 .task{
     border-radius: 3px;
-    background-color: #dfdfdf;
+    background-color: #dfe1e6;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -11,22 +11,29 @@
 .task_header{
     display: flex;
     justify-content: space-between;
-    color: #6d808c;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+    color: #000000;
 }
 .task__captionTask{
 flex-grow: 0;
 font-weight: bold;
 padding: 10px;
 }
-.task__microtasks div:first-child{
-    margin-top: 0px;
-}
+
 .task__btnClose{
     display: flex;
-    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    padding-right: 10px;
+    border-radius: 3px;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
 }
+.task__btnClose:hover{
+    background-color: #C3C8D1;
+ }
 
 .task__microtasks{
     overflow: auto;
@@ -37,7 +44,7 @@ padding: 10px;
 }
 
 .task__createTask:hover{
-background-color: indianred;
+background-color:  #C3C8D1;
 border-bottom-right-radius : 3px;
 border-bottom-left-radius : 3px;
 }

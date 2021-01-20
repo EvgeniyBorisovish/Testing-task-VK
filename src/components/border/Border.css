@@ -9,9 +9,7 @@
    justify-content: start;
    align-items: stretch;
     padding:5px;
-    background-size: cover;
-    background-position: 50%;
-    background-image: url(http://react-kanban-board.surge.sh/static/media/background.7bce26d5.jpg);
+  
 }
 
 .task_conteiner{

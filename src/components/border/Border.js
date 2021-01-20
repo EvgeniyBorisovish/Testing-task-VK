@@ -136,7 +136,7 @@ const onDragEnd = (result) => {
                }
               
    </DragDropContext>
-   <div className="task_conteiner"><Addtask getAction={addTask.bind(null,ADD_TASK)}/></div>
+   <div className="task_conteiner"><Addtask getAction={addTask.bind(null,ADD_TASK)} textPlaceholder={"Введите текст  макрозадача"}/></div>
    </div>
    );
    

@@ -1,7 +1,11 @@
 
 import React,{useState,useRef} from 'react'
 
-export const Addtask = ({getAction})=>{
+import addSvg from "../../images/addBtnTask.svg";
+
+import clearSvg from "../../images/clear.svg";
+
+export const Addtask = ({getAction,textPlaceholder})=>{
 
 const [inputBlock,setInputBlock] = useState(false)
 const refEl =  useRef(null)
@@ -25,16 +29,16 @@ const exuteAction = ()=>{
 
         {
             !inputBlock && (
-            <div className="addtaskFirstBtn" onClick={hideShowStartTask.bind(null,true)}>&#10010;&nbsp;&nbsp; Добавить еще одну карточку</div>
+            <div className="addtaskFirstBtn" onClick={hideShowStartTask.bind(null,true)}><img className="addSvg-img" src={addSvg}></img><span>Добавить еще одну карточку</span></div>
             )
         }
         {
             inputBlock && (
             <div className="taskInput">
-                <p><textarea ref={refEl} className="taskInput__TextArea" placeholder="введите текст задача"></textarea></p>
+                <p><textarea ref={refEl} className="taskInput__TextArea" placeholder={textPlaceholder}></textarea></p>
                 <div className="task__btns_area">
                         <div  className="task__btn_add" onClick={exuteAction}>Добавить карточку</div>
-                        <div className="task__btn_X" onClick={hideShowStartTask.bind(null,false)}><div>&#10006;</div></div>      
+                        <div className="task__btn_X" onClick={hideShowStartTask.bind(null,false)}><img className="add-form__bottom-clear" src={clearSvg}></img></div>      
                 </div>
             </div>)
             

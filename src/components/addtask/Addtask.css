@@ -1,30 +1,48 @@
 .addtask{
     border-radius: 3px;
     background-color: #dfdfdf;
+    color: #6d808c;
 }
 .addtaskFirstBtn{
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    border-radius: 0 0 3px 3px;
     cursor: pointer;
-    font-size: 14px;
-    color: #6d808c;
-    flex-grow: 0;
-    padding: 10px;
-    
+    width: 100%;
 }
+
 .addtaskFirstBtn:hover{
-    background-color: indianred;
-    border-bottom-right-radius : 3px;
-    border-bottom-left-radius : 3px;
-    }
+    color: #000000;
+    background-color: #C2CAD0;
+}
+
+
+
+.add-form__bottom-clear {
+    cursor: pointer;
+}
+
+.addSvg-img{
+    margin-right: 8px;
+}
+
 
 .taskInput{
     cursor: pointer;
     padding: 10px;
     
 }
+
+
+
 .taskInput__TextArea{
+    padding: 12px;
+    min-height: 75px;
     outline: none;
     border: none;
     width: 100%;
+    resize: none;
     border-radius: 3px;
 }
 .task__btns_area{
@@ -35,11 +53,16 @@
 .task__btn_add{
     cursor: pointer;
     background-color: #39c071;
-    padding: 9px 12px;
+    padding: 12px;
     border-radius: 3px;
     color: white;
     font-weight: bold;
+    font-size: 14px;
 }
+.task__btn_add:hover{
+background-color: #49C97E;
+}
+
 
 .task__btn_X{
     display: flex;
