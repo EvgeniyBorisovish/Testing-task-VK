@@ -2,10 +2,7 @@
 
 Демо — https://testing-task-vk.vercel.app/
 
-![](https://drive.google.com/file/d/1o1XrdCfWZoDxyrJau3y9VDDJqm8maQ7e/view?usp=sharing)
-<iframe src="https://drive.google.com/file/d/1o1XrdCfWZoDxyrJau3y9VDDJqm8maQ7e/preview?resourcekey=null" width="640" height="480"></iframe>
-## Используемые технологии
-
+![Image alt](https://github.com/EvgeniyBorisovish/Testing-task-VK/edit/main/https://yadi.sk/i/KkMt2J4nL8m8aQ)
 - ReactJS
 - Redux
 - React Beautiful DND
