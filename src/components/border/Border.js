@@ -57,101 +57,29 @@ const onDragEnd = (result) => {
    
    dispath({type:CHANGE_PLACE_MT,payload:{source:source,destination:destination}})
 
-   return
-
-
-
-   if (source.droppableId === destination.droppableId) {
-        //dispath({type:CHANGE_PLACE_MT,payload:{source:source.index,destination:destination.index}})
-
-
-        dispath({type:CHANGE_PLACE_MT,payload:{source:source,destination:destination}})
-
-    return
-
-        console.log( source , destination )
-
-       const items = reorder(
-           this.getList(source.droppableId),
-           source.index,
-           destination.index
-       );
-
-       let state = { items };
-
-       if (source.droppableId === 'droppable2') {
-           state = { selected: items };
-       }
-       if (source.droppableId === 'droppable3') {
-           state = { selected2: items };
-       }
-       this.setState(state);
-   } else {
-
-
-    console.log(source , destination)
-        return
-
-
-       const result = move(
-           this.getList(source.droppableId),
-           this.getList(destination.droppableId),
-           source,
-           destination
-       );
-
-  
-  
-
-       let changeObj = {};
-
-       if (result.droppable) {
-           changeObj.items = result.droppable;
-       }
-       if (result.droppable2) {
-           changeObj.selected = result.droppable2;
-       }
-       if (result.droppable3) {
-           changeObj.selected2 = result.droppable3;
-       }
-
-   }
 };
 
 
    return (
     <div className="border">
    <DragDropContext onDragEnd={onDragEnd}>
-            
                {tasks.map(
-                  
                      (id_task,index)=>{
-                         
                          return(
                            <Droppable type="CARDS" droppableId={String(id_task)} key={nanoid()}>
                            {
                               (provided) => (
-
-                              <div  className="task_conteiner" 
-                                ref={provided.innerRef} 
-                                key={nanoid()}>
-
+                              <div  className="task-conteiner" ref={provided.innerRef} key={nanoid()}>
                                   <Task id_task={id_task} key={nanoid()} provided={provided}/>
-                                
-                                  </div>
+                               </div>
                               )
-                             
                            }
-                            
                            </Droppable>
                          )
-                        }
-                        
-                        )
+                        })
                }
-              
    </DragDropContext>
-   <div className="task_conteiner"><Addtask getAction={addTask.bind(null,ADD_TASK)} textPlaceholder={"Введите текст  макрозадача"}/></div>
+   <div className="task-conteiner"><Addtask getAction={addTask.bind(null,ADD_TASK)} textPlaceholder={"Введите текст  макрозадача"}/></div>
    </div>
    );
    

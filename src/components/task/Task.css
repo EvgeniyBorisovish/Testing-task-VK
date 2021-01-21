@@ -8,7 +8,7 @@
     margin-right: 20px;
     overflow: auto;
   }
-.task_header{
+.task-header{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -16,13 +16,13 @@
     padding: 12px;
     color: #000000;
 }
-.task__captionTask{
+.task-header__captionTask{
 flex-grow: 0;
 font-weight: bold;
 padding: 10px;
 }
 
-.task__btnClose{
+.task-header__btnClose{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -31,55 +31,14 @@ padding: 10px;
     height: 24px;
     cursor: pointer;
 }
-.task__btnClose:hover{
+.task-header__btnClose:hover{
     background-color: #C3C8D1;
  }
 
-.task__microtasks{
+.task-microtasks{
     overflow: auto;
     flex-grow: 1;
     padding: 0 10px;
     display: flex;
     flex-direction: column;
-}
-
-.task__createTask:hover{
-background-color:  #C3C8D1;
-border-bottom-right-radius : 3px;
-border-bottom-left-radius : 3px;
-}
-.task__btn_add{
-    cursor: pointer;
-    background-color: #39c071;
-    padding: 9px 12px;
-    border-radius: 3px;
-    color: white;
-    font-weight: bold;
-}
-.task__createTask{
-    font-size: 14px;
-    color: #6d808c;
-    flex-grow: 0;
-    padding: 10px;
-    
-}
-.task__texttask{
-    outline: none;
-    border: none;
-    width: 100%;
-}
-.task__createTaskBtn{
-    padding: 10px;
-  
-}
-.task__btns_area{
-    display: flex;
-    justify-content: space-between;
-    align-items: stretch;
-}
-.task__btn_X{
-    display: flex;
-    align-items: center;
-    margin-left: 20px;
-    color: #6d808c; 
 }

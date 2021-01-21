@@ -23,35 +23,18 @@ const handDelTask = ()=>{
 }
 
 return (<div className="task">
-        <div className="task_header">
+        <div className="task-header">
           
-          <b className="task__captionTask">{data_obj.caption}</b>
-          <div className="task__btnClose" onClick={handDelTask} ><img src={clearSvg}></img></div>
+          <b className="task-header__captionTask">{data_obj.caption}</b>
+          <div className="task-header__btnClose" onClick={handDelTask} ><img src={clearSvg}></img></div>
         </div>
-        <div className="task__microtasks">
+        <div className="task-microtasks">
               {tasks_arr.map(({id,text,id_task},index)=>{
-                return(
-                    /*<Draggable
-                      key={id}
-                      draggableId={ String(id) }
-                      index={index}>
-                        {
-                          (provided ) => (*/
-                            /*<Microtask id={id} text={text} key={String(id)} provided={provided} 
-                            />*/
-                            <Microtask id={id} text={text} key={String(id)} index={index}/>
-                            
-                  /*       )
-                        }
-                    </Draggable>*/
-                )
-                
+                return(<Microtask id={id} text={text} key={String(id)} index={index}/>)
               })}
         {provided.placeholder}
         </div>
         
         <Addtask getAction={addMicroTaskHandler.bind(null,ADD_MICRO_TASK)} textPlaceholder={"Введите текст  микрозадача"}/>
         </div>);
-     
 }
-//   <Addtask getAction={addMicroTaskHandler.bind(null,ADD_MICRO_TASK)}/>

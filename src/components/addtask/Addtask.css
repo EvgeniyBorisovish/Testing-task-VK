@@ -3,7 +3,7 @@
     background-color: #dfdfdf;
     color: #6d808c;
 }
-.addtaskFirstBtn{
+.addtask-FirstBtn{
     display: flex;
     align-items: center;
     padding: 12px;
@@ -12,7 +12,7 @@
     width: 100%;
 }
 
-.addtaskFirstBtn:hover{
+.addtask-FirstBtn:hover{
     color: #000000;
     background-color: #C2CAD0;
 }
@@ -23,7 +23,7 @@
     cursor: pointer;
 }
 
-.addSvg-img{
+.addtask-FirstBtn__addSvg-img{
     margin-right: 8px;
 }
 
@@ -31,7 +31,6 @@
 .taskInput{
     cursor: pointer;
     padding: 10px;
-    
 }
 
 
@@ -45,12 +44,12 @@
     resize: none;
     border-radius: 3px;
 }
-.task__btns_area{
+.taskInput-btnsarea{
     display: flex;
     justify-content: space-between;
     align-items: stretch;
 }
-.task__btn_add{
+.taskInput-btnsarea__btn-add{
     cursor: pointer;
     background-color: #39c071;
     padding: 12px;
@@ -59,12 +58,12 @@
     font-weight: bold;
     font-size: 14px;
 }
-.task__btn_add:hover{
+.taskInput-btnsarea__btn-add:hover{
 background-color: #49C97E;
 }
 
 
-.task__btn_X{
+.taskInput-btnsarea__btn-X{
     display: flex;
     align-items: center;
     margin-left: 20px;
