@@ -16,7 +16,7 @@ export const Border = ()=>{
   const dispath = useDispatch()
 
   const tasks = useSelector((state)=>state.task.tasks_arr)
-  
+  console.log(tasks)
   const addTask = (actionType,value)=>{
    value = value.trim()
    if (value==="" || actionType.trim()===""){return}
@@ -55,8 +55,17 @@ const onDragEnd = (result) => {
 
    if (!destination) { return; }
    
+   dispath({type:CHANGE_PLACE_MT,payload:{source:source,destination:destination}})
+
+   return
+
+
+
    if (source.droppableId === destination.droppableId) {
-        dispath({type:CHANGE_PLACE_MT,payload:{source:source.index,destination:destination.index}})
+        //dispath({type:CHANGE_PLACE_MT,payload:{source:source.index,destination:destination.index}})
+
+
+        dispath({type:CHANGE_PLACE_MT,payload:{source:source,destination:destination}})
 
     return
 
@@ -78,6 +87,12 @@ const onDragEnd = (result) => {
        }
        this.setState(state);
    } else {
+
+
+    console.log(source , destination)
+        return
+
+
        const result = move(
            this.getList(source.droppableId),
            this.getList(destination.droppableId),
