@@ -16,7 +16,6 @@ export const Border = ()=>{
   const dispath = useDispatch()
 
   const tasks = useSelector((state)=>state.task.tasks_arr)
-  console.log(tasks)
   const addTask = (actionType,value)=>{
    value = value.trim()
    if (value==="" || actionType.trim()===""){return}
