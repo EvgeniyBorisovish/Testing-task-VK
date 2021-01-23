@@ -54,6 +54,6 @@ return (<div className="task">
         }
         
         
-        <Addtask getAction={addMicroTaskHandler.bind(null,ADD_MICRO_TASK)} textPlaceholder={"Введите текст  микрозадача"}/>
+        <Addtask getAction={addMicroTaskHandler.bind(null,ADD_MICRO_TASK)} textPlaceholder={"Введите текст  микрозадачи"}/>
         </div>);
 }
