@@ -31,7 +31,7 @@ return (<div className="task">
           
         <b className="task-header__captionTask">
           {data_obj.caption}
-          { (tasks_arr.length>0 && visibleMicrotasks)  && <span className="task-header__hideMicrotasks" onClick={shangeVisible}>Свернуть</span>}
+          { (tasks_arr.length>1 && visibleMicrotasks)  && <span className="task-header__hideMicrotasks" onClick={shangeVisible}>Свернуть</span>}
         </b>
         <div className="task-header__btnClose" onClick={handDelTask} ><img src={clearSvg}></img></div>
         </div>
@@ -49,7 +49,7 @@ return (<div className="task">
           !visibleMicrotasks
           &&
           
-            <span className="task-header__showMicrotasks" onClick={shangeVisible}> Показать список задач</span>
+            <span className="task-header__showMicrotasks" onClick={shangeVisible}> Показать список из {tasks_arr.length} задач</span>
           
         }
         
