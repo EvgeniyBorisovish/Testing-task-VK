@@ -34,10 +34,25 @@ padding: 10px;
     background-color: #C3C8D1;
  }
 
+ 
+ 
+
 .task-microtasks{
     overflow: auto;
     flex-grow: 1;
     padding: 0 10px;
     display: flex;
     flex-direction: column;
+}
+
+
+@media (max-width:890px) {
+    .task-header__showMicrotask{
+        display: inline;
+     }
+}
+@media (min-width: 891px) {
+    .task-header__showMicrotask{
+        display: none;
+     }
 }
