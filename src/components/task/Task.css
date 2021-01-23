@@ -44,15 +44,23 @@ padding: 10px;
     display: flex;
     flex-direction: column;
 }
+.task-header__hideMicrotasks{
+    padding-left: 20px;
+    color: blue;
+}
 
-
+.task-header__showMicrotasks{
+    color: blue;
+    font-weight: bold;
+    text-align: center;
+}
 @media (max-width:890px) {
-    .task-header__showMicrotask{
+    .task-header__hideMicrotasks{
         display: inline;
      }
 }
 @media (min-width: 891px) {
-    .task-header__showMicrotask{
+    .task-header__hideMicrotasks{
         display: none;
      }
 }

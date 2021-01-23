@@ -29,7 +29,10 @@ const shangeVisible = ()=>{
 return (<div className="task">
         <div className="task-header">
           
-        <b className="task-header__captionTask">{data_obj.caption}{ tasks_arr.length>0  && <span className="task-header__showMicrotask" onClick={shangeVisible}> &nbsp;&nbsp; {visibleMicrotasks?"Cкрыть":"Раскрыть"} </span>}</b>
+        <b className="task-header__captionTask">
+          {data_obj.caption}
+          { (tasks_arr.length>0 && visibleMicrotasks)  && <span className="task-header__hideMicrotasks" onClick={shangeVisible}>Свернуть</span>}
+        </b>
         <div className="task-header__btnClose" onClick={handDelTask} ><img src={clearSvg}></img></div>
         </div>
         {
@@ -41,7 +44,13 @@ return (<div className="task">
               })}
         {provided.placeholder}
         </div>
-
+        }
+        {
+          !visibleMicrotasks
+          &&
+          
+            <span className="task-header__showMicrotasks" onClick={shangeVisible}> Показать список задач</span>
+          
         }
         
         
