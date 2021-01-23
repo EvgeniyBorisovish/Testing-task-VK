@@ -29,7 +29,7 @@ const exuteAction = ()=>{
 
         {
             !inputBlock && (
-            <div className="addtask-FirstBtn" onClick={hideShowStartTask.bind(null,true)}><img className="addtask-FirstBtn__addSvg-img" src={addSvg}></img><span>Добавить еще одну карточку</span></div>
+            <div className="addtask-FirstBtn" onClick={hideShowStartTask.bind(null,true)}><img className="addtask-FirstBtn__addSvg-img" src={addSvg} alt="Добавить"></img><span>Добавить еще одну карточку</span></div>
             )
         }
         {
@@ -38,7 +38,7 @@ const exuteAction = ()=>{
                 <p><textarea ref={refEl} className="taskInput__TextArea" placeholder={textPlaceholder}></textarea></p>
                 <div className="taskInput-btnsarea">
                         <div  className="taskInput-btnsarea__btn-add" onClick={exuteAction}>Добавить карточку</div>
-                        <div className="taskInput-btnsarea__btn-X" onClick={hideShowStartTask.bind(null,false)}><img className="taskInput-btnsarea__bottom-clear" src={clearSvg}></img></div>      
+                        <div className="taskInput-btnsarea__btn-X" onClick={hideShowStartTask.bind(null,false)}><img className="taskInput-btnsarea__bottom-clear" alt="Удалить" src={clearSvg}></img></div>      
                 </div>
             </div>)
             

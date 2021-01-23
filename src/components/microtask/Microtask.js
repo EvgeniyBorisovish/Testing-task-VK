@@ -23,7 +23,7 @@ export const Microtask = ({id,text,index})=>{
             {...provided.dragHandleProps}
             >
               <div className="microtask__text">{text}</div>
-              <div className="microtask__btnClose" onClick={handDelMicroTask} ><img className="microtask__btnClose-svg" src={clearSvg}></img></div>
+              <div className="microtask__btnClose" onClick={handDelMicroTask} ><img className="microtask__btnClose-svg" alt="Удалить" src={clearSvg}></img></div>
           </div>
               )
               }

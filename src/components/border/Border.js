@@ -16,37 +16,12 @@ export const Border = ()=>{
   const dispath = useDispatch()
 
   const tasks = useSelector((state)=>state.task.tasks_arr)
+
   const addTask = (actionType,value)=>{
    value = value.trim()
    if (value==="" || actionType.trim()===""){return}
-   dispath({type:actionType,payload:{caption:value,id:nanoid()}})
+   dispath({type:actionType,payload:{caption:value,id:nanoid(),visibleMicrotasks:true}})
   }
-
-
-  const reorder = (list, startIndex, endIndex) => {
-   const result = Array.from(list);
-   const [removed] = result.splice(startIndex, 1);
-   result.splice(endIndex, 0, removed);
-
-   return result;
-};
-
-/**
-* Moves an item from one list to another list.
-*/
-const move = (source, destination, droppableSource, droppableDestination) => {
-   const sourceClone = Array.from(source);
-   const destClone = Array.from(destination);
-   const [removed] = sourceClone.splice(droppableSource.index, 1);
-
-   destClone.splice(droppableDestination.index, 0, removed);
-
-   const result = {};
-   result[droppableSource.droppableId] = sourceClone;
-   result[droppableDestination.droppableId] = destClone;
-
-   return result;
-};
 
 const onDragEnd = (result) => {
 
@@ -83,4 +58,4 @@ const onDragEnd = (result) => {
    );
    
 }
-// <div className="task_conteiner"><Addtask/></div>
+
