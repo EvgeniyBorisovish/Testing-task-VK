@@ -12,6 +12,7 @@ export const Task = ({id_task,provided})=>{
 const dispath = useDispatch()
 const data_obj = useSelector((state)=>(state.task.tasks_obj[id_task]))
 const tasks_arr = useSelector((state)=>(Object.values(state.microtask.tasks_obj).filter((task)=>(task.id_task===id_task))))
+console.log(tasks_arr.length)
 
 const addMicroTaskHandler = (actionType,value)=>{
   value = value.trim()
@@ -25,7 +26,7 @@ const handDelTask = ()=>{
 return (<div className="task">
         <div className="task-header">
           
-          <b className="task-header__captionTask">{data_obj.caption}</b>
+          <b className="task-header__captionTask">{data_obj.caption}</b>{ tasks_arr.length>0  && <span>Раскрыть</span>}
           <div className="task-header__btnClose" onClick={handDelTask} ><img src={clearSvg}></img></div>
         </div>
         <div className="task-microtasks">
